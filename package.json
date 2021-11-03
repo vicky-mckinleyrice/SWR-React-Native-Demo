@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0-beta.8",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "@nandorojo/swr-react-native",
+  "author": "Fernando Rojo",
+  "module": "dist/swr-react-native.esm.js",
+  "repository": {
+    "url": "https://github.com/nandorojo/swr-react-native"
+  },
+  "size-limit": [
+    {
+      "path": "dist/swr-react-native.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/swr-react-native.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@react-native-community/netinfo": "^6.0.4",
+    "@react-navigation/native": "^5.8.10",
+    "@size-limit/preset-small-lib": "^4.9.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-native": "^0.63.37",
+    "eslint-config-nando": "^1.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^4.3.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "size-limit": "^4.9.0",
+    "swr": "^1.1.0-beta.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "@nandorojo/swr-react-native": "^1.0.0-beta.8.1"
+  }
+}
