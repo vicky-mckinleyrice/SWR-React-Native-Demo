@@ -12,5 +12,5 @@ declare type Props<Data, Error> = {
  */
 export declare function useSWRNativeRevalidate<Data = any, Error = any>(props: Props<Data, Error>): void;
 declare type Fetcher<Data> = ((...args: any) => Data | Promise<Data>) | null;
-declare const useSWRNative: <Data = any, Error_1 = any>(key: Key, fn?: Fetcher<Data>, config?: Partial<import("swr/dist/types").Configuration<Data, Error_1, import("swr/dist/types").Fetcher<Data>>> | undefined) => SWRResponse<Data, Error_1>;
+declare const useSWRNative: <Data = any, Error_1 = any>(key: Key, fn?: Fetcher<Data>, config?: Partial<import("swr/dist/types").PublicConfiguration<Data, Error_1, Key>> | undefined) => SWRResponse<Data, Error_1>;
 export default useSWRNative;
